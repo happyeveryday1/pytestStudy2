@@ -6,18 +6,18 @@ class TestSendRequest:
     #类变量：通过类名访问
     access_token=''
     csrf_token=''
-    cks=''
+    session=requests.session()
+
+    def setup(self):
+        print("在每个用例执行前执行")
+
+    def teardown(self):
+        print("在每个用例执行后执行一次")
 
 
-    # def test_file_opload(self):
-    #     url=''
-    #     data={
-    #         'media':open(r"E:\shu.png","rb")
-    #     }
-    #     requests.post(url=url,files=data)
     def test_start(self):
         url='http://47.107.116.139/phpwind/'
-        rep=requests.request("get",url=url)
+        rep=TestSendRequest.session.request("get",url=url)
         #网页只能通过文本格式打开
         #print(rep.text)
         #通过正则表达式获取鉴权码
@@ -38,8 +38,7 @@ class TestSendRequest:
             "backurl":"http://47.107.116.139/phpwind/",
             "invite":""
         }
-        rep=requests.request('post',url=url,data=data,headers=headers,cookies=TestSendRequest.cks)
+        rep=TestSendRequest.session.request('post',url=url,data=data,headers=headers)
         print(rep.json())
-if __name__ == '__main__':
-    pytest.main(['-vs'])
+
 

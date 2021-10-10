@@ -1,0 +1,8 @@
+-
+  name: 获得统一的鉴权码token
+  request:
+    method: get
+    url: http://47.107.116.139/phpwind/
+    data:
+
+  validate: None

@@ -1,0 +1,41 @@
+[ {
+  "uid" : "1ccc254231156019",
+  "name" : "test_login",
+  "time" : {
+    "start" : 1634040405028,
+    "stop" : 1634040405137,
+    "duration" : 109
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a19970a8d487972b",
+  "name" : "test_api[hym-29]",
+  "time" : {
+    "start" : 1634040404841,
+    "stop" : 1634040404841,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "43d95bdecc2f1980",
+  "name" : "test_start",
+  "time" : {
+    "start" : 1634040404856,
+    "stop" : 1634040405012,
+    "duration" : 156
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "69430a0dc1ca75ae",
+  "name" : "test_api[冀江涛-30]",
+  "time" : {
+    "start" : 1634040404841,
+    "stop" : 1634040404841,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Oct 12 20:06:44 CST 2021","Tue Oct 12 20:06:44 CST 2021","0","testcases","test_api","TestApi","","","test_api[hym-29]",""
+"passed","Tue Oct 12 20:06:44 CST 2021","Tue Oct 12 20:06:45 CST 2021","156","testcases","test_send_request","TestSendRequest","","","test_start",""
+"passed","Tue Oct 12 20:06:44 CST 2021","Tue Oct 12 20:06:44 CST 2021","0","testcases","test_api","TestApi","","","test_api[冀江涛-30]",""
+"passed","Tue Oct 12 20:06:45 CST 2021","Tue Oct 12 20:06:45 CST 2021","109","testcases","test_send_request","TestSendRequest","","","test_login",""

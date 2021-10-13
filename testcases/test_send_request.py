@@ -18,15 +18,15 @@ class TestSendRequest:
 
     def test_start(self,conn_database):
         url='http://47.107.116.139/phpwind/'
-
-        # rep=RequestUtil().send_request("get",url)
+        #rep=RequestUtil().send_request("get",url)
         # print(rep.join())
-        rep=TestSendRequest.session.request("get",url=url)
+
+        rep=TestSendRequest.session.request(method='get',url=url)
 
         #通过正则表达式获取鉴权码
         YamlUtil().write_extract_yaml({'csrf_token': re.search('name="csrf_token" value="(.*?)"',rep.text)[1]})
-        # TestSendRequest.csrf_token=re.search('name="csrf_token" value="(.*?)"',rep.text)[1]
-        # print(TestSendRequest.csrf_token)
+        #TestSendRequest.csrf_token=re.search('name="csrf_token" value="(.*?)"',rep.text)[1]
+        #print(TestSendRequest.csrf_token)
 
     @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_login.yml'))
     def test_login(self,caseinfo):
@@ -37,8 +37,9 @@ class TestSendRequest:
         data=caseinfo['request']['data']
         data['csrf_token']=csrf_token
 
-        result=RequestUtil().send_request(method,url,data,headers)
-        print(result)
+        result=RequestUtil().send_request(method, url, data, headers)
+        print(json.loads(result))
+
         # rep=TestSendRequest.session.request(method,url=url,data=data,headers=headers)
         # print(rep.json())
 
